@@ -16,6 +16,9 @@ python-multipart = "^0.0.17"
 pydantic-settings = "^2.6.1"
 alembic = "^1.14.0"
 asyncpg = "^0.30.0"
+libgravatar = "^1.0.4"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 
 
 [build-system]

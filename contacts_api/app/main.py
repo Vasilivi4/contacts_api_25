@@ -1,12 +1,11 @@
 from fastapi import FastAPI
-from .routers import contacts
+from .routers import contacts, auth
 from .database import engine
 from . import models
 
-# Створення всіх таблиць
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-# Підключення роутера для контактів
 app.include_router(contacts.router)
+app.include_router(auth.router)
